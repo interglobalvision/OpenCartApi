@@ -33,7 +33,7 @@ class ControllerApiProduct extends Controller {
         $images = array();
 
         foreach ($additional_images as $additional_image) {
-            $images[] = $this->model_tool_image->resize($additional_image, $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
+            $images[] = $this->model_tool_image->resize($additional_image['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
         }
 
         #specal
